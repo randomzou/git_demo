@@ -1,6 +1,7 @@
 # 版本控制Git使用笔记
 ---
-### 本地创建库与远端同步
+[TOC]
+### 创建本地库
 ```
 #　建立本地git repos
 zys@zys-Lenovo:~/git_workplace/github$ mkdir git_demo
@@ -17,7 +18,7 @@ ls: cannot access ./git: No such file or directory
 zys@zys-Lenovo:~/git_workplace/github/git_demo$ ls .git/
 branches  config  description  HEAD  hooks  info  objects  refs
 ```
-### 本地关联远端repository新增文件并提交
+### 新增文件并提交
 - 将当前文件添加到index区
     - git add file, git add * # 所有文件
 - 查看当前分支文件修改情况
@@ -45,9 +46,9 @@ zys@zys-Lenovo:~/git_workplace/github/git_demo$ git commit  -m "add README.md fi
 
 ```
 
-### 关联远端repository并上载到远端
+### 关联远端库并上载到远端
 - 在远端建立库来同步本地库
-![{C6FF807B-0F52-4D51-B286-515A847DB6A9}.png-57.6kB][3]
+![{C6FF807B-0F52-4D51-B286-515A847DB6A9}.png-57.6kB][2]
 - 本地库与远程库关联
     - git remote add origin https://github.com/randomzou/git_demo.git
     - https or ssh 模式
@@ -140,11 +141,33 @@ Total 4 (delta 0), reused 0 (delta 0)
 To https://github.com/randomzou/git_demo.git
  * [new branch]      git_demo_b1 -> git_demo_b1
 ```
-![{05A3413F-550F-4614-8407-A3B476201215}.png-53kB][4]
+![{05A3413F-550F-4614-8407-A3B476201215}.png-53kB][3]
+### 从远端已有库clone到本地
+- 获取远端库地址，采取https or ssh 方式
+	- 　git clone git_path
+```
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ git clone https://github.com/randomzou/git_demo.git
+Cloning into 'git_demo'...
+remote: Counting objects: 19, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 19 (delta 2), reused 7 (delta 0), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+Checking connectivity... done.
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ ls
+git_demo
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ cd git_demo/
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone/git_demo$ ls
+README.md  remote_new.txt
+```
+
+![{D9139AC0-7E41-4EB0-A38F-EF59E5C8CB71}.png-73.8kB][4]
+
+### 参考
 
 - http://rogerdudler.github.io/git-guide/index.zh.html
 
+
   [1]: http://rogerdudler.github.io/git-guide/img/trees.png
-  [2]: http://rogerdudler.github.io/git-guide/img/treesstatic.zybuluo.com/randomxy/e0xcg9hbfas20m95ootd6yac/%7B05A3413F-550F-4614-8407-A3B476201215%7D.png
-  [3]: http://static.zybuluo.com/randomxy/z53kt5ci348odw4ub0f4bvwh/%7BC6FF807B-0F52-4D51-B286-515A847DB6A9%7D.png
-  [4]: http://static.zybuluo.com/randomxy/jpmg1628ntipzgbtbuep7boq/%7B05A3413F-550F-4614-8407-A3B476201215%7D.png
+  [2]: http://static.zybuluo.com/randomxy/z53kt5ci348odw4ub0f4bvwh/%7BC6FF807B-0F52-4D51-B286-515A847DB6A9%7D.png
+  [3]: http://static.zybuluo.com/randomxy/jpmg1628ntipzgbtbuep7boq/%7B05A3413F-550F-4614-8407-A3B476201215%7D.png
+  [4]: http://static.zybuluo.com/randomxy/aa9gdp7aoamtpbbx3gefwu4l/%7BD9139AC0-7E41-4EB0-A38F-EF59E5C8CB71%7D.png
