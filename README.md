@@ -47,7 +47,7 @@ zys@zys-Lenovo:~/git_workplace/github/git_demo$ git commit  -m "add README.md fi
 
 ### 关联远端repository并上载到远端
 - 在远端建立库来同步本地库
-<center>![{C6FF807B-0F52-4D51-B286-515A847DB6A9}.png-57.6kB][3]</center＞
+![{C6FF807B-0F52-4D51-B286-515A847DB6A9}.png-57.6kB][3]
 - 本地库与远程库关联
     - git remote add origin https://github.com/randomzou/git_demo.git
     - https or ssh 模式
