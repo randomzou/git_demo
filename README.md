@@ -1,4 +1,4 @@
-# 版本控制工具Git使用笔记
+# 版本控制Git使用笔记
 ---
 [TOC]
 ### 创建本地库
@@ -144,9 +144,22 @@ To https://github.com/randomzou/git_demo.git
 ![{05A3413F-550F-4614-8407-A3B476201215}.png-53kB][3]
 ### 从远端已有库clone到本地
 - 获取远端库地址，采取https or ssh 方式
+	- 　git clone git_path
 ```
-git clone 
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ git clone https://github.com/randomzou/git_demo.git
+Cloning into 'git_demo'...
+remote: Counting objects: 19, done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 19 (delta 2), reused 7 (delta 0), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+Checking connectivity... done.
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ ls
+git_demo
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone$ cd git_demo/
+zys@zys-Lenovo:~/git_workplace/github/git_demo_clone/git_demo$ ls
+README.md  remote_new.txt
 ```
+
 ![{D9139AC0-7E41-4EB0-A38F-EF59E5C8CB71}.png-73.8kB][4]
 
 
